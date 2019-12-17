@@ -21,7 +21,6 @@ mongoose.connect("mongodb+srv://Emily:Devron%403@cluster0-wolrq.mongodb.net/fina
 });
 
 var app = express(); // create an instance of express
-app.set("view engine", "html");
 
 // import the routing file to handle the default (index) route
 var index = require('./server/routes/app');
@@ -42,26 +41,28 @@ app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested_with, Content-Type, Accept"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, PATCH, PUT, DELETE, OPTIONS"
-  );
-  next();
-});
-
-// Tell express to use the specified director as the
-// root directory for your web site
-app.use(express.static(path.join(__dirname, 'dist/finalProject')));
-
-// Tell express to map the default route ("/") to the index route
-app.use("/", index);
-
-// ... ADD YOUR CODE TO MAP YOUR URL'S TO ROUTING FILES HERE ...
-app.use("/api/movies", movieRoutes);
-
-app.use(function(req, res, next) {
-  res.render("index");
+    );
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, PATCH, PUT, DELETE, OPTIONS"
+      );
+      next();
+    });
+    
+    // Tell express to use the specified director as the
+    // root directory for your web site
+    app.set("views", "views");
+    app.set("view engine", "html");
+    app.use(express.static(path.join(__dirname, 'dist/finalProject')));
+    
+    // Tell express to map the default route ("/") to the index route
+    app.use("/", index);
+    
+    // ... ADD YOUR CODE TO MAP YOUR URL'S TO ROUTING FILES HERE ...
+    app.use("/api/movies", movieRoutes);
+    
+    app.use(function(req, res, next) {
+      res.render("index");
 });
 
 
