@@ -21,7 +21,7 @@ mongoose.connect("mongodb+srv://Emily:Devron%403@cluster0-wolrq.mongodb.net/fina
 });
 
 var app = express(); // create an instance of express
-app.set("view engine", "js");
+app.set("view engine", "html");
 
 // import the routing file to handle the default (index) route
 var index = require('./server/routes/app');
