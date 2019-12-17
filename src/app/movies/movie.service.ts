@@ -16,7 +16,7 @@ export class MovieService {
 
   getMovies() {
     // this.http.get("http://localhost:3000/api/movies")
-    this.http.get("http://fathomless-wildwood-37339.herokuapp.com/api/movies")
+    this.http.get("https://fathomless-wildwood-37339.herokuapp.com/api/movies")
     .subscribe(
       // success function
       (returnInfo: {message: String, movies: Movie[]}) => {
@@ -43,7 +43,7 @@ export class MovieService {
 
   fetchingMovies() {
     // return this.http.get<{message: String, movies: Movie[]}>("http://localhost:3000/api/movies")
-    return this.http.get<{message: String, movies: Movie[]}>("http://fathomless-wildwood-37339.herokuapp.com/api/movies")
+    return this.http.get<{message: String, movies: Movie[]}>("https://fathomless-wildwood-37339.herokuapp.com/api/movies")
       .pipe(tap(movieInfo => {
           this.movies = movieInfo.movies;
         }
@@ -57,7 +57,7 @@ export class MovieService {
     }
     
     // this.http.delete<{message: string}>("http://localhost:3000/api/movies/" + movie.movieId)
-    this.http.delete<{message: string}>("http://fathomless-wildwood-37339.herokuapp.com/api/movies/" + movie.movieId)
+    this.http.delete<{message: string}>("https://fathomless-wildwood-37339.herokuapp.com/api/movies/" + movie.movieId)
     .subscribe(
       (returnInfo) => {
           let pos = this.movies.indexOf(movie);
@@ -83,7 +83,7 @@ export class MovieService {
     const strMovie = JSON.stringify(newMovie);
     
     // this.http.post<{message: string, movie: Movie}>("http://localhost:3000/api/movies", strMovie, {headers: headers})
-    this.http.post<{message: string, movie: Movie}>("http://fathomless-wildwood-37339.herokuapp.com/api/movies", strMovie, {headers: headers})
+    this.http.post<{message: string, movie: Movie}>("https://fathomless-wildwood-37339.herokuapp.com/api/movies", strMovie, {headers: headers})
       .subscribe(
         (movieInfo) => {
           // we want to use the returned movie because it has the correct "id" field filled in (from the database)
@@ -116,7 +116,7 @@ export class MovieService {
     // this.http.put<{message: string, movie: Movie}>("http://localhost:3000/api/movies/" + originalMovie.movieId,
     //                 strMovie,
     //                 {headers: headers})
-    this.http.put<{message: string, movie: Movie}>("http://fathomless-wildwood-37339.herokuapp.com/api/movies/" + originalMovie.movieId,
+    this.http.put<{message: string, movie: Movie}>("https://fathomless-wildwood-37339.herokuapp.com/api/movies/" + originalMovie.movieId,
                     strMovie,
                     {headers: headers})
       .subscribe(
