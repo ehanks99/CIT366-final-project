@@ -51,8 +51,6 @@ app.use((req, res, next) => {
     
     // Tell express to use the specified director as the
     // root directory for your web site
-    app.set("views", "views");
-    app.set("view engine", "html");
     app.use(express.static(path.join(__dirname, 'dist/finalProject')));
     
     // Tell express to map the default route ("/") to the index route
