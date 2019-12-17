@@ -10,7 +10,7 @@ import { MoviesResolverService } from './movies/movies-resolver.service';
 const appRoutes: Routes = [
   { path: '', redirectTo: 'movies', pathMatch: 'full' },
   { path: 'movies', component: MoviesComponent, children: [
-    // { path: '', component: DocumentStartComponent, pathMatch: 'full' },
+    { path: '', component: MoviesComponent, pathMatch: 'full' },
     { path: 'new', component: MovieEditComponent },
     { path: ':id', component: MovieDetailComponent, resolve: [MoviesResolverService] }, 
     { path: ':id/edit', component: MovieEditComponent, resolve: [MoviesResolverService] }
