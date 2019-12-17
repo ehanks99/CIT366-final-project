@@ -7,6 +7,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 
+// import the routing file to handle the default (index) route
+var index = require('./server/routes/app');
+
+// ... ADD CODE TO IMPORT YOUR ROUTING FILES HERE ... 
+const movieRoutes = require("./server/routes/movies");
 
 // establish a connection to the mongo database
 // *** Important *** change yourPort and yourDatabase
@@ -22,11 +27,6 @@ mongoose.connect("mongodb+srv://Emily:Devron%403@cluster0-wolrq.mongodb.net/fina
 
 var app = express(); // create an instance of express
 
-// import the routing file to handle the default (index) route
-var index = require('./server/routes/app');
-
-// ... ADD CODE TO IMPORT YOUR ROUTING FILES HERE ... 
-const movieRoutes = require("./server/routes/movies");
 
 // Tell express to use the following parsers for POST data
 app.use(bodyParser.json());

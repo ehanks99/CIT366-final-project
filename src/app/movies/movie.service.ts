@@ -16,7 +16,7 @@ export class MovieService {
 
   getMovies() {
     // this.http.get("http://localhost:3000/api/movies")
-    this.http.get("/api/movies")
+    this.http.get("http://fathomless-wildwood-37339.herokuapp.com/api/movies")
     .subscribe(
       // success function
       (returnInfo: {message: String, movies: Movie[]}) => {
