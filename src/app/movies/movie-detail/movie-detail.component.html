@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-md-1"><p></p></div>
+  <div class="col-md-10">
+    <hr style="border-top: 1px solid darkgray">
+    <h3 class="text-center inline-block">{{ movie?.name }}</h3>
+    <div class="text-center">
+      <a [routerLink]="['edit']" class="btn btn-primary">Edit</a>
+      &nbsp;&nbsp;
+      <a (click)="onDelete()" class="btn btn-danger">Delete</a>
+    </div>
+    <hr style="border-top: 1px solid darkgray">
+
+    <div class="col-sm-4">
+      <img 
+        [src]="movie?.imageUrl" 
+        alt="{{ movie?.name }}"
+        class="main-picture img-responsive">
+      <br/>
+    </div><br/>
+    <div class="col-sm-8">
+      <p>{{ movie?.summary }}</p>
+      <br/>
+
+      <div class="row">
+        <div class="col-xs-6">
+          <!-- Directors -->
+          <h5> <b> {{ (movie?.directors.length > 1) ? 'Director(s):' : 'Director:' }}</b> </h5>
+          <h5 *ngFor="let director of movie?.directors">
+            &nbsp;&nbsp;&nbsp;&nbsp;{{ director }}
+          </h5>
+
+          <!-- Actors -->
+          <h5> <b> {{ (movie?.actors.length > 1) ? 'Actor(s):' : 'Actor:' }}</b> </h5>
+          <h5 *ngFor="let actor of movie?.actors">
+            &nbsp;&nbsp;&nbsp;&nbsp;{{ actor }}
+          </h5>
+        </div>
+        <div class="col-xs-6">
+          <!-- Genres -->
+          <h5> <b> {{ (movie?.genres.length > 1) ? 'Genre(s):' : 'Genre:' }}</b> </h5>
+          <h5 *ngFor="let genre of movie?.genres">
+            &nbsp;&nbsp;&nbsp;&nbsp;{{ genre }}
+          </h5>
+
+          <!-- Rating -->
+          <h5> <b>Rated:</b> {{ movie?.rating }}</h5>
+          <br/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1"><p></p></div>
+</div>

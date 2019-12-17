@@ -1,0 +1,13 @@
+<a 
+  [routerLink]="['/movies', movie?.movieId]"
+  routerLinkActive="active">
+  <br/>
+  <div class="verticle-lines">
+    <img 
+      [src]="movie?.imageUrl" 
+      alt="{{ movie?.name }}" 
+      class="img-responsive picture" 
+      style="max-height:150px">
+    <br/>
+  </div>
+</a>

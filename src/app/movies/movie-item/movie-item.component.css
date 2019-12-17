@@ -1,0 +1,13 @@
+.picture
+{
+  height: 150px; 
+  width: auto; 
+  margin-left: 20px; 
+  margin-right: 20px;
+}
+
+.verticle-lines {
+  border-left: 1.5px solid gray;
+  border-right: 1.5px solid gray;
+  height: 150px;
+}

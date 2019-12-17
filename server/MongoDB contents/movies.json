@@ -1,0 +1,103 @@
+[
+  { 
+    "movieId": "10",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BODJkZTZhMWItMDI3Yy00ZWZlLTk4NjQtOTI1ZjU5NjBjZTVjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
+    "name": "Kung Fu Panda",
+    "summary": "Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung threatens Po's homeland, the hapless panda is chosen to fulfil an ancient prophecy and defend the Valley from attack. Training under Master Shifu, Po embarks on an epic high-kicking adventure as he sets out to thwart Tai Lung's evil plans. A DreamWorks animation.",
+    "rating": "PG",
+    "actors": ["Jack Black", "Dustin Hoffman", "Angelina Jolie"],
+    "directors": ["Mark Osborne", "John Stevenson"],
+    "genres": ["Action", "Adventure", "Comedy", "Kids"]
+  },
+  { 
+    "movieId": "17",
+    "imageUrl": "https://is3-ssl.mzstatic.com/image/thumb/Video123/v4/89/d2/a0/89d2a0d4-6d57-fbc6-544f-b51f92ffdb7a/pr_source.jpg/268x0w.jpg",
+    "name": "Jurassic Park",
+    "summary": "In Steven Spielberg's massive blockbuster, paleontologists Alan Grant (Sam Neill) and Ellie Sattler (Laura Dern) and mathematician Ian Malcolm (Jeff Goldblum) are among a select group chosen to tour an island theme park populated by dinosaurs created from prehistoric DNA. While the park's mastermind, billionaire John Hammond (Richard Attenborough), assures everyone that the facility is safe, they find out otherwise when various ferocious predators break free and go on the hunt.",
+    "rating": "PG-13",
+    "actors": ["Sam Neill", "Laura Dern", "Jeff Goldblum"],
+    "directors": ["Steven Spielberg"],
+    "genres": ["Action", "Science Fiction", "Suspense"]
+  },
+  { 
+    "movieId": "22",
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81bEk4cFbHL._SY445_.jpg",
+    "name": "Jurassic World",
+    "summary": "Located off the coast of Costa Rica, the Jurassic World luxury resort provides a habitat for an array of genetically engineered dinosaurs, including the vicious and intelligent Indominus rex. When the massive creature escapes, it sets off a chain reaction that causes the other dinos to run amok. Now, it's up to a former military man and animal expert (Chris Pratt) to use his special skills to save two young brothers and the rest of the tourists from an all-out, prehistoric assault.",
+    "rating": "PG-13",
+    "actors": ["Chris Pratt", "Bryce Dallas Howard", "Vincent D'Onofrio"],
+    "directors": ["Colin Trevorrow"],
+    "genres": ["Science Fiction", "Action", "Suspense", "Drama"]
+  },
+  { 
+    "movieId": "23",
+    "imageUrl": "https://resizing.flixster.com/HvdEe1T_ga0MDjKBTth0FilcTYw%3D/206x305/v1.bTsxMTE3MDI2MTtqOzE4MzU0OzEyMDA7ODAwOzEyMDA",
+    "name": "Rise of the Guardians",
+    "summary": "Generation after generation, immortal Guardians like Santa Claus (Alec Baldwin), the Easter Bunny (Hugh Jackman) and the Tooth Fairy (Isla Fisher) protect the world's children from darkness and despair. However, an evil boogeyman named Pitch Black (Jude Law) schemes to overthrow the Guardians by obliterating children's belief in them. It falls to a winter sprite named Jack Frost (Chris Pine) to thwart Pitch's plans and save the Guardians from destruction.",
+    "rating": "PG",
+    "actors": ["Hugh Jackman", "Alec Baldwin", "Isla Fisher"],
+    "directors": ["Peter Ramsey"],
+    "genres": ["Kids", "Comedy"]
+  },
+  { 
+    "movieId": "33",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTk2NzczOTgxNF5BMl5BanBnXkFtZTcwODQ5ODczOQ@@._V1_.jpg",
+    "name": "Star Trek: Into Darkness",
+    "summary": "The crew of the Starship Enterprise returns home after an act of terrorism within its own organization destroys most of Starfleet and what it represents, leaving Earth in a state of crisis. With a personal score to settle, Capt. James T. Kirk (Chris Pine) leads his people (Zachary Quinto, Karl Urban, Zoë Saldana) on a mission to capture a one-man weapon of mass destruction, thereby propelling all of them into an epic game of life and death.",
+    "rating": "PG-13",
+    "actors": ["John Cho", "Benedict Cumberbatch", "Alice Eve"],
+    "directors": ["J. J. Abrams"],
+    "genres": ["Action", "Science Fiction"]
+  },
+  { 
+    "movieId": "50",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/6/68/The_mummy.jpg/220px-The_mummy.jpg",
+    "name": "The Mummy (1999)",
+    "summary": "The Mummy is a rousing, suspenseful and horrifying epic about an expedition of treasure-seeking explorers in the Sahara Desert in 1925. Stumbling upon an ancient tomb, the hunters unwittingly set loose a 3,000-year-old legacy of terror, which is embodied in the vengeful reincarnation of an Egyptian priest who had been sentenced to an eternity as one of the living dead.",
+    "rating": "PG-13",
+    "actors": ["Brendan Fraser", "Rachel Weisz", "John Hannah", "Arnold Vosloo"],
+    "directors": ["Stephen Sommers"],
+    "genres": ["Action", "Adventure", "Drama", "Horror", "Suspense"]
+  },
+  { 
+    "movieId": "89",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg",
+    "name": "The Lord of the Rings: The Fellowship of the Ring",
+    "summary": "The future of civilization rests in the fate of the One Ring, which has been lost for centuries. Powerful forces are unrelenting in their search for it. But fate has placed it in the hands of a young Hobbit named Frodo Baggins (Elijah Wood), who inherits the Ring and steps into legend. A daunting task lies ahead for Frodo when he becomes the Ringbearer - to destroy the One Ring in the fires of Mount Doom where it was forged.",
+    "rating": "PG-13",
+    "actors": ["Elijah Wood", "Ian Mckellen", "Liv Tyler"],
+    "directors": ["Peter Jackson"],
+    "genres": ["Science Fiction", "Action", "Drama"]
+  },
+  { 
+    "movieId": "92",
+    "imageUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6266/6266706_so.jpg",
+    "name": "The Meg",
+    "summary": "Previously thought to be extinct, a massive creature attacks a deep-sea submersible, leaving it disabled and trapping the crew at the bottom of the Pacific. With time running out, a visionary oceanographer recruits rescue diver Jonas Taylor to save the crew and the sea itself from an unimaginable threat -- a 75-foot-long prehistoric shark known as the Megalodon.",
+    "rating": "PG-13",
+    "actors": ["Jason Statham", "Li Bingbing", "Rainn Wilson"],
+    "directors": ["Jon Turtletaub"],
+    "genres": ["Action", "Adventure", "Suspense"]
+  },
+  { 
+    "movieId": "95",
+    "imageUrl": "https://mk0movieguide99l7786.kinstacdn.com/wp-content/uploads/2018/07/skyscraper-768x1216.jpg",
+    "name": "Skyscraper",
+    "summary": "Will Sawyer is a former FBI agent and U.S. war veteran who now assesses security for skyscrapers. While he's on assignment in China, the world's tallest and safest building catches on fire -- and Will gets framed for it. Now a wanted man and on the run, he must find those responsible, clear his name and somehow rescue his family members when they become trapped inside the inferno.",
+    "rating": "PG-13",
+    "actors": ["Dwayne Johnson", "Neve Campbell", "Chin Han"],
+    "directors": ["Rawson Marshall Thurber"],
+    "genres": ["Action"]
+  }
+]
+
+// { 
+//   "movieId": ,
+//   "imageUrl": ,
+//   "name": ,
+//   "summary": ,
+//   "rating": ,
+//   "actors": ,
+//   "directors": ,
+//   "genres": 
+// }

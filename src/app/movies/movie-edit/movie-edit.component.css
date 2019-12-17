@@ -1,0 +1,11 @@
+.main-picture
+{
+   height: 300px; 
+   width: auto; 
+   margin-left: 25px; 
+   margin-right: 25px;
+}
+
+.required.ng-invalid.ng-touched {
+  border: 1px solid red;
+}

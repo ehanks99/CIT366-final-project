@@ -1,0 +1,246 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="name">Movie Name</label>
+            <input 
+              type="text" 
+              id="name"
+              name="name"
+              class="form-control required"
+              [ngModel]="movie?.name"
+              required
+              #name="ngModel">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="imageUrl">Image URL</label>
+            <input 
+              type="text" 
+              id="imageUrl"
+              name="imageUrl"
+              class="form-control required"
+              [ngModel]="movie?.imageUrl"
+              required
+              #imageUrl="ngModel">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <img [src]="imageUrl.value" class="img-responsive main-picture">
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="summary">Summary</label>
+            <textarea 
+              type="text" 
+              id="summary"
+              name="summary"
+              class="form-control required"
+              rows="6"
+              [ngModel]="movie?.summary"
+              required
+              #summary="ngModel"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <br/><hr>
+      <h3>Rating</h3><br/>
+      <div class="row">
+        <input type="radio" name="rating" id="G" value="G" [(ngModel)]="movie.rating">&nbsp;
+        <label for="G">G</label><br/>
+
+        <input type="radio" name="rating" id="PG" value="PG" [(ngModel)]="movie.rating">&nbsp;
+        <label for="PG">PG</label><br/>
+        
+        <input type="radio" name="rating" id="PG-13" value="PG-13" [(ngModel)]="movie.rating">&nbsp;
+        <label for="PG-13">PG-13</label><br/>
+        
+        <input type="radio" name="rating" id="R" value="R" [(ngModel)]="movie.rating">&nbsp;
+        <label for="R">R</label><br/>
+        
+        <input type="radio" name="rating" id="TV-MA" value="TV-MA" [(ngModel)]="movie.rating">&nbsp;
+        <label for="TV-MA">TV-MA</label><br/>
+        
+        <input type="radio" name="rating" id="NC-17" value="NC-17" [(ngModel)]="movie.rating">&nbsp;
+        <label for="NC-17">NC-17</label><br/>
+        
+        <input type="radio" name="rating" id="NR" value="NR" [(ngModel)]="movie.rating">&nbsp;
+        <label for="NR">NR</label><br/>
+      </div>
+
+
+      <br/><hr>
+      <!-- start of genres -->
+      <h3 class="text-center">Genres</h3><br/>
+      <!-- There are 20 genres. Put five genres in each of four columns -->
+      <div class="row">
+        <div class="col-sm-3">
+          <div *ngFor="let genre of genres?.slice(0, 5); let i = index">
+            <div class="form-check form-check-inline">
+              <input 
+                type="checkbox" 
+                class="form-check-input" 
+                id="checkbox" 
+                [checked]="checked[i]"
+                name="genres[{{i}}]"
+                [(ngModel)]="checked[i]">&nbsp;
+              <label for="checkbox" class="form-checck-label">{{ genre }}</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div *ngFor="let genre of genres?.slice(5, 10); let i = index">
+            <div class="form-check form-check-inline">
+              <input 
+                type="checkbox" 
+                class="form-check-input" 
+                id="checkbox" 
+                [checked]="checked[i+5]"
+                name="genres[{{i+5}}]"
+                [(ngModel)]="checked[i+5]">&nbsp;
+              <label for="checkbox" class="form-checck-label">{{ genre }}</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div *ngFor="let genre of genres?.slice(10, 15); let i = index">
+            <div class="form-check form-check-inline">
+              <input 
+                type="checkbox" 
+                class="form-check-input" 
+                id="checkbox" 
+                [checked]="checked[i+10]"
+                name="genres[{{i+10}}]"
+                [(ngModel)]="checked[i+10]">&nbsp;
+              <label for="checkbox" class="form-checck-label">{{ genre }}</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div *ngFor="let genre of genres?.slice(15, 20); let i = index">
+            <div class="form-check form-check-inline">
+              <input 
+                type="checkbox" 
+                class="form-check-input" 
+                id="checkbox" 
+                [checked]="checked[i+15]"
+                name="genres[{{i+15}}]"
+                [(ngModel)]="checked[i+15]">&nbsp;
+              <label for="checkbox" class="form-checck-label">{{ genre }}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of genres -->
+      <br/><hr>
+
+      <h3 class="text-center">Directors and Starring Actors</h3><br/>
+      <div class="row">
+        <!-- start of directors -->
+        <div class="col-xs-6">
+          <div class="row">
+            <div class="col-xs-10"><label for="directorName">Director Name</label></div>
+            <div class="col-xs-2"><label for="cancel">Delete</label></div>
+          </div>
+          <div 
+            class="row" 
+            *ngFor="let director of movie?.directors; let i = index; trackBy:customTrackBy"
+            style="margin-top: 10px">
+            <div class="col-xs-10">
+              <input 
+                type="text"
+                id="directorName"
+                class="form-control"
+                name="directors[{{i}}]"
+                [(ngModel)]="movie?.directors[i]">
+            </div>
+            <div class="col-xs-2">
+              <button 
+                type="button"
+                class="btn btn-dark"
+                id="cancel"
+                (click)="onDeleteDirector(i)">X</button>
+            </div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-xs-12">
+              <button 
+              type="button"
+              class="btn btn-primary" 
+              (click)="onAddDirector()">Add Director</button>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <!-- end of directors -->
+
+        <!-- start of actors-->
+        <div class="col-xs-6">
+          <div class="row">
+            <div class="col-xs-10"><label for="actorName">Starring Actor Name</label></div>
+            <div class="col-xs-2"><label for="cancel">Delete</label></div>
+          </div>
+          <div 
+            class="row" 
+            *ngFor="let actor of movie?.actors; let i = index; trackBy:customTrackBy"
+            style="margin-top: 10px">
+            <div class="col-xs-10">
+              <input 
+                type="text"
+                id="actorName"
+                class="form-control"
+                name="actors[{{i}}]"
+                [(ngModel)]="movie?.actors[i]">
+            </div>
+            <div class="col-xs-2">
+              <button 
+                type="button"
+                class="btn btn-dark"
+                id="cancel"
+                (click)="onDeleteActor(i)">X</button>
+            </div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-xs-12">
+              <button 
+              type="button"
+              class="btn btn-primary" 
+              (click)="onAddActor()">Add Actor</button>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <!-- end of actors -->
+      </div>
+
+      <br/>
+      <div class="row pull-right">
+        <!-- <div class="col-xs-12"> -->
+          <button 
+            type="submit" 
+            class="btn btn-success"
+            [disabled]="!form.valid">Save Movie</button>&nbsp;
+          <button 
+            type="button" 
+            class="btn btn-danger"
+            (click)="onCancel()">Cancel</button>
+        <!-- </div> -->
+      </div>
+
+    </form>
+  </div>
+</div>
+

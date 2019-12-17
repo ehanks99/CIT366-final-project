@@ -1,0 +1,15 @@
+<div class="input-group pull-right col-md-3">
+  <input type="text" 
+    class="form-control" 
+    placeholder="Search..."
+    [(ngModel)]="searchTerm">
+  <div class="glyphicon glyphicon glyphicon-search input-group-addon"></div>
+</div>
+<br/><br/>
+<div id="carousel">
+  <app-movie-item
+    *ngFor="let movie of movies | moviesFilter:searchTerm"
+    [movie]="movie"
+    class="slide">
+  </app-movie-item>
+</div>
