@@ -35,7 +35,6 @@ app.use(cookieParser());
 app.use(logger('dev')); // Tell express to use the Morgan logger
 
 // Add support for CORS
-// app.use(allowCrossDomain);
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
